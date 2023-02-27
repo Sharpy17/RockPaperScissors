@@ -69,10 +69,10 @@ function game() {
     }
 }   
 
- game ();
-
  if (countUser > countComputer) {
     results1.textContent = `You have won the game! Congratulations!`
  } else {
     results1.textContent = `You have fucking lost! Uncogratulations!`
  }
+
+ if ()
