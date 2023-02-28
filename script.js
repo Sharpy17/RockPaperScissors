@@ -14,15 +14,18 @@ body.appendChild(results1);
 let userChoice = ""
 
 rock.addEventListener('click', () => {
-    userChoice == "rock";
+    userChoice = 0;
+    console.log(userChoice);
 });
 
 paper.addEventListener('click', () => {
-    userChoice == "paper";
+    userChoice = 1;
+    console.log(userChoice);
 });
 
 scissors.addEventListener('click', () => {
-    userChoice == "scissors";
+    userChoice = 2;
+    console.log(userChoice);
 });
 
 function printChoice(index) {
@@ -60,19 +63,23 @@ function playRound() {
     } else {
         results.textContent = `Anish Giri`;
     }
-}
+};
 
 function game() {
-    for (let i = 0; countUser < 5 && countComputer < 5; i++) {
-        playRound(); 
-        score.textContent = `You have ${countUser} points, while the computer has ${countComputer} points.`;
+    playRound();
+    score.textContent = `You have ${countUser} points, while the computer has ${countComputer} points.`
+    if (countUser == 5) {
+        results1.textContent = `You have won!`;
+    } else if (countComputer == 5) {
+        results1.textContent = `You have lost!`;
     }
-}   
+}
 
- if (countUser > countComputer) {
-    results1.textContent = `You have won the game! Congratulations!`
- } else {
-    results1.textContent = `You have fucking lost! Uncogratulations!`
- }
+ function addEventListenerByClass(className, event, fn) {
+    var list = document.getElementsByClassName(className);
+    for (var i = 0, len = list.length; i < len; i++) {
+        list[i].addEventListener(event, fn, false);
+    }
+}
 
- if ()
+addEventListenerByClass("butt", "click", game);
