@@ -57,11 +57,14 @@ function playRound() {
     if (userChoice == (computedChoice + 1) % 3) {
         results.textContent = `You win! ${printChoice(userChoice)} beats ${printChoice(computedChoice)}`
         countUser = (countUser + 1);
+        results1.textContent = "";
     } else if (computedChoice == (userChoice + 1) % 3){
         results.textContent = `You fucking lose! ${printChoice(computedChoice)} beats ${printChoice(userChoice)}`;
         countComputer = (countComputer + 1);
+        results1.textContent = "";
     } else {
         results.textContent = `Anish Giri`;
+        results1.textContent = "";
     }
 };
 
