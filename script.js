@@ -70,8 +70,12 @@ function game() {
     score.textContent = `You have ${countUser} points, while the computer has ${countComputer} points.`
     if (countUser == 5) {
         results1.textContent = `You have won!`;
+        countUser = 0
+        countComputer = 0
     } else if (countComputer == 5) {
         results1.textContent = `You have lost!`;
+        countUser = 0
+        countComputer = 0
     }
 }
 
