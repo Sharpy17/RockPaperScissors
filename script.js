@@ -63,7 +63,7 @@ function playRound() {
         countComputer = (countComputer + 1);
         results1.textContent = "";
     } else {
-        results.textContent = `Anish Giri`;
+        results.textContent = `Anish Giri(tie)`;
         results1.textContent = "";
     }
 };
